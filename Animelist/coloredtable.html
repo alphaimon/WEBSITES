@@ -1,3112 +1,3153 @@
-<!DOCTYPE html>
-
+<!-- <!DOCTYPE html> -->
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha's Watchlist</title>
+    <title>My AnimeList</title>
+    <link rel="shortcut icon" type="image/jpg" href="../SiteIcon.ico" />
 
     <link rel="stylesheet" href="styles.css">
     <script src="myScript.js" async></script>
+
+    <!--************NaviGation Bar********************** -->
+    <header>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 2 2 2 2;
+
+                overflow: hidden;
+                background-color: #e4edfc;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: flex;
+                width: max-content;
+                color: #000;
+                text-align: center;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: rgb(22, 72, 163);
+                color: white;
+            }
+        </style>
+        <h2>
+            <ul>
+                <li><a class="active" href="../index.html">Home</a></li>
+                <li><a href="coloredtable.html">AnimeList</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </h2>
+    </header>
 </head>
-<hody> 
-    <!-- <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"> -->
+<hody>
+    <!-- autoplay=1 -->
+    <iframe width="device-width" height="320" src="https://www.youtube.com/embed/sjkrrmBnpGE?autoplay=1"
+        title="Chill Music" frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </iframe>
 
-        <iframe width="680" height="315" src="https://www.youtube.com/embed/sjkrrmBnpGE" title="Chill Music" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</iframe>
-    
 
-    <table id="AnimeTable";
-
-    cellspacing="0"; cellpadding="3"; border="0"
-    >
-<!-- 
+    <table id="AnimeTable" ; cellspacing="0" ; cellpadding="3" ; border="0">
+        <!-- 
     The Sort Buttons are added in the headers
  -->
-   <thead>
-        <tr><th title="WatchOrder"><button onclick="sortByWatchOrders()">WatchOrder</button></th>
-        <th title="AnimeName"><button onclick="sortByName()" >Name</button></th>
-        <th title="Ratings"><button onclick="sortByRating()">Ratings</button></th>
-        <th title="Genre">Genre</th>
-        <th title="TotalEpisodes #5">Total Episodes</th>
-        <th title="isCompleted">Completed</th>
-        <th title="isDropped">Dropped</th>
-        <th title="EpisodeWatched">Episode Watched</th>
-        <th title="Remarks">Remarks</th>
-        </tr>
-   </thead>
+        <thead>
+            <tr>
+                <th title="WatchOrder"><button onclick="sortByWatchOrders()">WatchOrder</button></th>
+                <th title="AnimeName"><button onclick="sortByName()">Name</button></th>
+                <th title="Ratings"><button onclick="sortByRating()">Ratings</button></th>
+                <th title="Genre">Genre</th>
+                <th title="TotalEpisodes #5">Total Episodes</th>
+                <th title="isCompleted">Completed</th>
+                <th title="isDropped">Dropped</th>
+                <th title="EpisodeWatched">Episode Watched</th>
+                <th title="Remarks">Remarks</th>
+            </tr>
+        </thead>
 
-    <tbody><tr>
-    <td  >2</td>
-    <td>DB Series</td>
-    <td  >9.6</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >3</td>
-    <td>Death Note</td>
-    <td  >9.25</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >4</td>
-    <td>Code Geass</td>
-    <td  >9.5</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >5</td>
-    <td>Hunter X Hunter</td>
-    <td  >8.39</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >6</td>
-    <td>HighSchool DxD</td>
-    <td  >9.29</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >7</td>
-    <td>Charlotee</td>
-    <td  >7.53</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >8</td>
-    <td>Akame Ga Kill</td>
-    <td  >8.75</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >9</td>
-    <td>Prison School</td>
-    <td  >3.1</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >10</td>
-    <td>Familer of Zero</td>
-    <td  >6.15</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >11</td>
-    <td>Monster Musume</td>
-    <td  >5.6</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >12</td>
-    <td>Masau Gakun HXH</td>
-    <td  >7.15</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >13</td>
-    <td>SAO</td>
-    <td  >8.95</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >14</td>
-    <td>Hajiimeto no Gal</td>
-    <td  >6.2</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >15</td>
-    <td>Shimmai Maou no Testament</td>
-    <td  >8.5</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >16</td>
-    <td>Trinity Seven</td>
-    <td  >7.77</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >17</td>
-    <td>Highschool of the dead</td>
-    <td  >6.9</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >18</td>
-    <td>KissXsis</td>
-    <td  >7.7</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >19</td>
-    <td>Freezing</td>
-    <td  >6.21</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >20</td>
-    <td>Sakirei</td>
-    <td  >6.35</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >22</td>
-    <td>Tokyo Ghoul</td>
-    <td  >9.4</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >23</td>
-    <td>Hundred</td>
-    <td  >7.33</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >24</td>
-    <td>Infinite Stratos</td>
-    <td  >7.33</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >25</td>
-    <td>Tenchi Muyo! War on Geminar</td>
-    <td  >7.25</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >26</td>
-    <td>Elfen Lied</td>
-    <td  >8.64</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >27</td>
-    <td>Gobin Slayer</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >28</td>
-    <td>Campione</td>
-    <td  >7.43</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >29</td>
-    <td>Arifureta</td>
-    <td  >8.35</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >30</td>
-    <td>DateAlive</td>
-    <td  >7.76</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >31</td>
-    <td>Is this a Zombie ?</td>
-    <td  >6.95</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >32</td>
-    <td>Smartphone</td>
-    <td  >6.4</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >33</td>
-    <td>Rosario + Vampire</td>
-    <td  >6.19</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >34</td>
-    <td>Gakusen Toshi Asterisk</td>
-    <td  >7.86</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >35</td>
-    <td>Absolute Duo</td>
-    <td  >6.65</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >36</td>
-    <td>DanMachi</td>
-    <td  >7.45</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >37</td>
-    <td>Ichiban Vshiro no Daimaou</td>
-    <td  >7.66</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >38</td>
-    <td>Domestic Girlfriend</td>
-    <td  >8.24</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >39</td>
-    <td>The Royal Tutor</td>
-    <td  >6.5</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >40</td>
-    <td>Cautious Hero</td>
-    <td  >8.15</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >41</td>
-    <td>Classroom of the Elite</td>
-    <td  >8.2</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >42</td>
-    <td>Scum&#39;s Wish</td>
-    <td  >6.35</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >43</td>
-    <td>Highschool Prodigies</td>
-    <td  >7.24</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >44</td>
-    <td>Yosuga no Sora</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >45</td>
-    <td>How no to Summon a Demon Lord</td>
-    <td  >6.35</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >46</td>
-    <td>The Devil is a Part-timer</td>
-    <td  >6.75</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >47</td>
-    <td>Stein&#39;s Gate</td>
-    <td  >8.65</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >48</td>
-    <td>Bleach</td>
-    <td  >9.35</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >49</td>
-    <td>Neon Genisis Evangelion</td>
-    <td  >7.74</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >50</td>
-    <td>Astra Lost in Space</td>
-    <td  >8.18</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >51</td>
-    <td>Naruto</td>
-    <td  >9.75</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >52</td>
-    <td>Fullmetal Alchemist: Brotherhood</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >53</td>
-    <td>K-Project</td>
-    <td  >7.13</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >54</td>
-    <td>Gintama</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >55</td>
-    <td>Lost Universe</td>
-    <td  >7.2</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >56</td>
-    <td>Demon Slayer</td>
-    <td  >8.25</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >57</td>
-    <td>Overlord</td>
-    <td  >7.9</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >58</td>
-    <td>Future Dairy</td>
-    <td  >8.6</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >59</td>
-    <td>My Hero Academia</td>
-    <td  >8.45</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >60</td>
-    <td>Dr. Stone</td>
-    <td  >7</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >61</td>
-    <td>Shied Hero</td>
-    <td  >9.2</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >62</td>
-    <td>That time I got Reincarnated as  a Slime</td>
-    <td  >8.52</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >63</td>
-    <td>Fate Series</td>
-    <td  >8.95</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td>heaven&#39;s feel is left fate/stay-&gt;Best.UBW awesome…</td>
-    </tr>
-    <tr>
-    <td  >64</td>
-    <td>Fairy Tale</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >65</td>
-    <td>Attack on Titan</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >66</td>
-    <td>Re: Zero</td>
-    <td  >8.53</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >67</td>
-    <td>Seven deadly Sins</td>
-    <td  >7.15</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >68</td>
-    <td>Soul Eaters</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >69</td>
-    <td>Gate</td>
-    <td  >7.37</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >70</td>
-    <td>One piece</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >71</td>
-    <td>One Punch Man</td>
-    <td  >8.12</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >72</td>
-    <td>Babylon</td>
-    <td  ></td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >73</td>
-    <td>Black Clover</td>
-    <td  >8.73</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >74</td>
-    <td>Spice &amp; Wolf</td>
-    <td  >8.44</td>
-    <td> </td>
-    <td  >24</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >75</td>
-    <td>Tokyo Ravens</td>
-    <td  >7.67</td>
-    <td> </td>
-    <td  >24</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >76</td>
-    <td>Irregular at Magic Highschool</td>
-    <td  >8.353</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >77</td>
-    <td>I hate being In Pain so I&#39;ll make a full defence buiild</td>
-    <td  >6.24</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >78</td>
-    <td>Log Horizon</td>
-    <td  >8.55</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >79</td>
-    <td>Angel Beats</td>
-    <td  ></td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >80</td>
-    <td>Rogue Hero</td>
-    <td  >8.3</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >81</td>
-    <td>Chivalry of a Failed Knight</td>
-    <td  >6.77</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >82</td>
-    <td>A certain Scienfic Accelerator</td>
-    <td  >6.23</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >83</td>
-    <td>Rokko No Yusha</td>
-    <td  >7.5</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >84</td>
-    <td>Code Breaker</td>
-    <td  >7.89</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >85</td>
-    <td>Ao no Exorcist</td>
-    <td  >7.44</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >86</td>
-    <td>Death March</td>
-    <td  >6.612</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >87</td>
-    <td>Another</td>
-    <td  >8.4</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >88</td>
-    <td>Magi&#39;s Grandchild</td>
-    <td  >7.37</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >89</td>
-    <td>Alashic Record of the Bastard Instructor</td>
-    <td  ></td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >90</td>
-    <td>Noragami</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >91</td>
-    <td>Assassins Pride</td>
-    <td  >7.51</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >92</td>
-    <td>Anohana</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >93</td>
-    <td>Erased</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >94</td>
-    <td>Strike the Blood</td>
-    <td  >8.8</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >95</td>
-    <td>Isekai Cheat Magicians</td>
-    <td  >7.36</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >96</td>
-    <td>Sky Wizard&#39;s Academy</td>
-    <td  >6</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >97</td>
-    <td>Corpse Party</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >98</td>
-    <td>Kings Avatar</td>
-    <td  >7.25</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >99</td>
-    <td>KonoSuba</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >100</td>
-    <td>Magi Series</td>
-    <td  >8.49</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >101</td>
-    <td>Nobelesse</td>
-    <td  >8.31</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >103</td>
-    <td>Mushishi</td>
-    <td  >8.15</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >104</td>
-    <td>Undefeated Bahamut Chornicle</td>
-    <td  >7.41</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >105</td>
-    <td>World Break</td>
-    <td  >7.4</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >106</td>
-    <td>Hensuki</td>
-    <td  ></td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >107</td>
-    <td>Devilman Crybaby</td>
-    <td  >4.5</td>
-    <td> </td>
-    <td  >10</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >108</td>
-    <td>No Blade Dance</td>
-    <td  >6.5</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >109</td>
-    <td>We Never learn</td>
-    <td  >7.12</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >110</td>
-    <td>Plunderer</td>
-    <td  >7.3</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >111</td>
-    <td>Darwin&#39;s Game</td>
-    <td  >7.25</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >112</td>
-    <td>God Eater</td>
-    <td  >8.36</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >113</td>
-    <td>ID: Invated</td>
-    <td  >7.15</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >114</td>
-    <td>Guilty Crown</td>
-    <td  >8.48</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >115</td>
-    <td>Black Bullet</td>
-    <td  >7.85</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >116</td>
-    <td>Bungo Stray Dogs</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >117</td>
-    <td>Sakamoto desu ga?</td>
-    <td  >7.12</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >118</td>
-    <td>Grimgar of Fantasy and Ash</td>
-    <td  >5.7</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >119</td>
-    <td>Haikuu</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >120</td>
-    <td>Mahou Sensou</td>
-    <td  >6.35</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >121</td>
-    <td>Seikokou no Dragonar</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >122</td>
-    <td>Qulidea Code</td>
-    <td  ></td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >123</td>
-    <td>Full Time Magister</td>
-    <td  >8.25</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >124</td>
-    <td>Reikenzan</td>
-    <td  >8.27</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >125</td>
-    <td>Legend of the Legendary Heroes</td>
-    <td  >8.47</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >126</td>
-    <td>Unbreakable Machine Doll</td>
-    <td  >6.3</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >127</td>
-    <td>Kingdom</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >128</td>
-    <td>Beelzebub</td>
-    <td  >8.37</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >129</td>
-    <td>Haganai</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >130</td>
-    <td>Knights and Magic</td>
-    <td  >7.5</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >131</td>
-    <td>Deadman Wonderland</td>
-    <td  >7.38</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >132</td>
-    <td>Black Butler</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >133</td>
-    <td>Jormungand</td>
-    <td  >7.6</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >134</td>
-    <td>Black Cat</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >135</td>
-    <td>Tower of God</td>
-    <td  >7.17</td>
-    <td> </td>
-    <td  >13</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >136</td>
-    <td>Twin Star Excorcists</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >137</td>
-    <td>Black Lagoon</td>
-    <td  >7.15</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >138</td>
-    <td>Death Parade</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >139</td>
-    <td>Ragnarok</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >140</td>
-    <td>Zero Chornicle</td>
-    <td  >6.34</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >141</td>
-    <td>Daily Life of the Immortal King</td>
-    <td  >7.2</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >142</td>
-    <td>Devils and Realists</td>
-    <td  ></td>
-    <td> </td>
-    <td  >4</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >143</td>
-    <td>Silver Guardian</td>
-    <td  >7.15</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >144</td>
-    <td>Psycho-Pass</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >145</td>
-    <td>Love is war</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >146</td>
-    <td>Science Fell in Love</td>
-    <td  >7.09</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >147</td>
-    <td>UQ Holder</td>
-    <td  >6.56</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >148</td>
-    <td>Radient</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >149</td>
-    <td>Millionare Detective</td>
-    <td  >6</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >150</td>
-    <td>Sorcerous Stabber Orphen</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >151</td>
-    <td>the 8th son</td>
-    <td  >6.4</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >152</td>
-    <td>Gelpnir</td>
-    <td  >6.25</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >153</td>
-    <td>Chain Chornicle</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >154</td>
-    <td>Re: Dive</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >155</td>
-    <td>Re: Creators</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >156</td>
-    <td>Kekkai sensen</td>
-    <td  >7.68</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >157</td>
-    <td>Shelled Regios</td>
-    <td  >6.7</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >158</td>
-    <td>No Gun Life</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >159</td>
-    <td>Doreiku</td>
-    <td  >7.23</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >160</td>
-    <td>Blade of the Immortal</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >161</td>
-    <td>Armed Girls Machiavellism</td>
-    <td  >7.2</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >162</td>
-    <td>Bed and Breakfast for Spirits</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >163</td>
-    <td>Kill la Kill</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >164</td>
-    <td>Maid Dragon</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >165</td>
-    <td>Arslan Senki</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >166</td>
-    <td>Avatar Series</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >167</td>
-    <td>Infinite Dendrogram</td>
-    <td  >6.6</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >168</td>
-    <td>Outbreak Company</td>
-    <td  >6.2</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >169</td>
-    <td>Dororo</td>
-    <td  >8.23</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >170</td>
-    <td>Great Pertender</td>
-    <td  >7.3</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >171</td>
-    <td>To Love Ru</td>
-    <td  >6.33</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >172</td>
-    <td>Monster</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >173</td>
-    <td>Fireforce</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >174</td>
-    <td>Assassication Classroom</td>
-    <td  >8.7</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >175</td>
-    <td>Shuffle</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >176</td>
-    <td>In/ Spectre</td>
-    <td  >7.35</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >177</td>
-    <td>Shigurui</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >178</td>
-    <td>Umaru-Chan</td>
-    <td  >4.3</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >179</td>
-    <td>The Promised Neverland</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >180</td>
-    <td>Senran Kagura</td>
-    <td  >6.22</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >181</td>
-    <td>C3</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >182</td>
-    <td>The Abandoned Scred Beasts</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >183</td>
-    <td>Seraph Of the End</td>
-    <td  >7.75</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >184</td>
-    <td>Fullmetal Panic</td>
-    <td  >7.16</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >185</td>
-    <td>Ajin</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >186</td>
-    <td>Witch Craft Works</td>
-    <td  >7.1</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >187</td>
-    <td>Tsuki ga kirei</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >188</td>
-    <td>When they Cry</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >189</td>
-    <td>Blood C</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >190</td>
-    <td>Why the Hell are you here </td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >191</td>
-    <td>Kabaneri of Iron Fortress</td>
-    <td  >7.79</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >192</td>
-    <td>I Couldn&#39;t become a Hero</td>
-    <td  >6.17</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >193</td>
-    <td>Samurai Champloo </td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >194</td>
-    <td>Hack Series</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >195</td>
-    <td>Darling in the Franxx</td>
-    <td  >7.42</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >196</td>
-    <td>Baccano</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >197</td>
-    <td>Xuan Yuan Sword</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >198</td>
-    <td>Bunny Girl Senpai</td>
-    <td  >7.2</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >199</td>
-    <td>Seiken no Blacksmith</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >200</td>
-    <td>Darker than Black</td>
-    <td  >7.68</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >201</td>
-    <td>Nisekoi</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >202</td>
-    <td>Yona of the Dawn</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >203</td>
-    <td>91 Days</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >204</td>
-    <td>Hinamatrui</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >205</td>
-    <td>Rainbow</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >206</td>
-    <td>Free</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >207</td>
-    <td>Prisma Illya</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >208</td>
-    <td>God of Highschool</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >209</td>
-    <td>Tokyo Majin</td>
-    <td  ></td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  >2</td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >210</td>
-    <td>Bungou no Alchemist</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >211</td>
-    <td>Demonic Cultivation</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >212</td>
-    <td>Monogatari Series</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >213</td>
-    <td>Baki</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  >4</td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >214</td>
-    <td>Misfit of Demon King Academy</td>
-    <td  >7.83</td>
-    <td> </td>
-    <td  >13</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >215</td>
-    <td>Mobile Suit Gundam</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >216</td>
-    <td>Certain Magical Index</td>
-    <td  >7.4</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >217</td>
-    <td>Deca-Dance</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >218</td>
-    <td>Monster Girl Doctor</td>
-    <td  >5</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >219</td>
-    <td>Peter Grill</td>
-    <td  >5.5</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >220</td>
-    <td>Rent a GirlFriend</td>
-    <td  >6.6</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >221</td>
-    <td>Accdance of a BookWorm</td>
-    <td  >6.32</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >222</td>
-    <td>Uzaki Chan</td>
-    <td  >4.7</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >223</td>
-    <td>Hidan no Aria</td>
-    <td  >6.62</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >224</td>
-    <td>Armor shop for ladies &amp; getleman</td>
-    <td  >3.5</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >225</td>
-    <td>Food Wars</td>
-    <td  >8.22</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >226</td>
-    <td>Cooking With Valkyries</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >227</td>
-    <td>The Fruit of Grishala</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >228</td>
-    <td>Devil&#39;s Line</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >229</td>
-    <td>Demon Lord Retry</td>
-    <td  >6.61</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >230</td>
-    <td>Conception</td>
-    <td  >4.25</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >231</td>
-    <td>Rage of Bahamut</td>
-    <td  >6.8</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >232</td>
-    <td>Gargantia on the Verdurous Planet</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >233</td>
-    <td>D.Gray man</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >234</td>
-    <td>Planting Manual</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >235</td>
-    <td>I want a Date</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >236</td>
-    <td>The King of Magic Bullet</td>
-    <td  >7.76</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >237</td>
-    <td>Alderamin on the Sky</td>
-    <td  >7.56</td>
-    <td> </td>
-    <td  >12</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >238</td>
-    <td>Puella Magi</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >239</td>
-    <td>Cheating Craft</td>
-    <td  >5.1</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >240</td>
-    <td>Break Blade</td>
-    <td  >7.8</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >241</td>
-    <td>Zetsuen no Tempst</td>
-    <td  >8.35</td>
-    <td> </td>
-    <td  >24</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >242</td>
-    <td>Love is hard for Otaku</td>
-    <td  >6.23</td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >243</td>
-    <td>Gurren Lagann</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >244</td>
-    <td>Violet Evergarden</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >245</td>
-    <td>Taboo Tattoo</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >246</td>
-    <td>I Want To Eat Your Pancreas</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >247</td>
-    <td>Beyblade Series</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >248</td>
-    <td>youjo senki</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >249</td>
-    <td>Outlaw star</td>
-    <td  >7.65</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >250</td>
-    <td>Ghost in the Shell Series</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >251</td>
-    <td>Kenichi: the mightiest disciple</td>
-    <td  >7.5</td>
-    <td> </td>
-    <td  >50</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >252</td>
-    <td>Hellsign Ultimate</td>
-    <td  >7.5</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >253</td>
-    <td>Shiki</td>
-    <td  >7</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >254</td>
-    <td>Samurai X trust &amp; Betrayal</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >255</td>
-    <td>Serial Experiments Lain</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >256</td>
-    <td>Parasyte</td>
-    <td  >8.4</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >257</td>
-    <td>Problem Children Are Coming from another world</td>
-    <td  >6.9</td>
-    <td> </td>
-    <td  >10</td>
-    <td>FALSE</td>
-    <td>TRUE</td>
-    <td  >8</td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >258</td>
-    <td>Maou Yuusha</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >259</td>
-    <td>Kaze no Stigma</td>
-    <td  >7.5</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >260</td>
-    <td>Maid Sama</td>
-    <td  >8.1</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >261</td>
-    <td>Classroom Crisis</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >262</td>
-    <td>Cowboy Bebop</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >263</td>
-    <td>Crono Crusasde</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >264</td>
-    <td>Jujutsu Kaisen</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >265</td>
-    <td>Standing on 1M lives</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >266</td>
-    <td>King&#39;s Raid</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >267</td>
-    <td>Shinkekai Yori</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >268</td>
-    <td>Shimoneta</td>
-    <td  >7.2</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >269</td>
-    <td>Our Last Crusade</td>
-    <td  ></td>
-    <td> </td>
-    <td  >12</td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >270</td>
-    <td>The Money &amp; Soul of Prossibility</td>
-    <td  >7.12</td>
-    <td> </td>
-    <td  >11</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >271</td>
-    <td>Kiznaiver</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >272</td>
-    <td>Tales of Zesteria the X</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td>opening../</td>
-    </tr>
-    <tr>
-    <td  >273</td>
-    <td>Aldnoah Zero</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >274</td>
-    <td>Blood Lad</td>
-    <td  >7.1</td>
-    <td> </td>
-    <td  >10</td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td>don’t be fooled by crappy cover</td>
-    </tr>
-    <tr>
-    <td  >275</td>
-    <td>Akudama Drive</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >276</td>
-    <td>Dorohedoro</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >277</td>
-    <td>Tonikawa Kawai</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >278</td>
-    <td>Talentless Nana</td>
-    <td  >7.08</td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >279</td>
-    <td>Heaven Official&#39;s Blessing</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >280</td>
-    <td>Grand Blue</td>
-    <td  >8.02</td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >281</td>
-    <td>Welcome To Demon School</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>TRUE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <td  >282</td>
-    <td>Berserk</td>
-    <td  ></td>
-    <td> </td>
-    <td  ></td>
-    <td>FALSE</td>
-    <td>FALSE</td>
-    <td  ></td>
-    <td> </td>
-    </tr>
-    <tr>
-    <!-- <td  >283</td>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>DB Series</td>
+                <td>9.6</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Death Note</td>
+                <td>9.25</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Code Geass</td>
+                <td>9.5</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Hunter X Hunter</td>
+                <td>8.39</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>HighSchool DxD</td>
+                <td>9.29</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Charlotee</td>
+                <td>7.53</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Akame Ga Kill</td>
+                <td>8.75</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Prison School</td>
+                <td>3.1</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Familer of Zero</td>
+                <td>6.15</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Monster Musume</td>
+                <td>5.6</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Masau Gakun HXH</td>
+                <td>7.15</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>SAO</td>
+                <td>8.95</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Hajiimeto no Gal</td>
+                <td>6.2</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Shimmai Maou no Testament</td>
+                <td>8.5</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Trinity Seven</td>
+                <td>7.77</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Highschool of the dead</td>
+                <td>6.9</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>KissXsis</td>
+                <td>7.7</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Freezing</td>
+                <td>6.21</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Sakirei</td>
+                <td>6.35</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Tokyo Ghoul</td>
+                <td>9.4</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>Hundred</td>
+                <td>7.33</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>Infinite Stratos</td>
+                <td>7.33</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>Tenchi Muyo! War on Geminar</td>
+                <td>7.25</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>Elfen Lied</td>
+                <td>8.64</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>Gobin Slayer</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>Campione</td>
+                <td>7.43</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>Arifureta</td>
+                <td>8.35</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>DateAlive</td>
+                <td>7.76</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>Is this a Zombie ?</td>
+                <td>6.95</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>Smartphone</td>
+                <td>6.4</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td>Rosario + Vampire</td>
+                <td>6.19</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>Gakusen Toshi Asterisk</td>
+                <td>7.86</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td>Absolute Duo</td>
+                <td>6.65</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>DanMachi</td>
+                <td>7.45</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td>Ichiban Vshiro no Daimaou</td>
+                <td>7.66</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>Domestic Girlfriend</td>
+                <td>8.24</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>39</td>
+                <td>The Royal Tutor</td>
+                <td>6.5</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>Cautious Hero</td>
+                <td>8.15</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>41</td>
+                <td>Classroom of the Elite</td>
+                <td>8.2</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>42</td>
+                <td>Scum&#39;s Wish</td>
+                <td>6.35</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>43</td>
+                <td>Highschool Prodigies</td>
+                <td>7.24</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>44</td>
+                <td>Yosuga no Sora</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>45</td>
+                <td>How no to Summon a Demon Lord</td>
+                <td>6.35</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>46</td>
+                <td>The Devil is a Part-timer</td>
+                <td>6.75</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>47</td>
+                <td>Stein&#39;s Gate</td>
+                <td>8.65</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>48</td>
+                <td>Bleach</td>
+                <td>9.35</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>49</td>
+                <td>Neon Genisis Evangelion</td>
+                <td>7.74</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td>Astra Lost in Space</td>
+                <td>8.18</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>51</td>
+                <td>Naruto</td>
+                <td>9.75</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>52</td>
+                <td>Fullmetal Alchemist: Brotherhood</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>53</td>
+                <td>K-Project</td>
+                <td>7.13</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>54</td>
+                <td>Gintama</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>55</td>
+                <td>Lost Universe</td>
+                <td>7.2</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>56</td>
+                <td>Demon Slayer</td>
+                <td>8.25</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>57</td>
+                <td>Overlord</td>
+                <td>7.9</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>58</td>
+                <td>Future Dairy</td>
+                <td>8.6</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>59</td>
+                <td>My Hero Academia</td>
+                <td>8.45</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>60</td>
+                <td>Dr. Stone</td>
+                <td>7</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>61</td>
+                <td>Shied Hero</td>
+                <td>9.2</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>62</td>
+                <td>That time I got Reincarnated as a Slime</td>
+                <td>8.52</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>63</td>
+                <td>Fate Series</td>
+                <td>8.95</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td>heaven&#39;s feel is left fate/stay-&gt;Best.UBW awesome…</td>
+            </tr>
+            <tr>
+                <td>64</td>
+                <td>Fairy Tale</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>65</td>
+                <td>Attack on Titan</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>66</td>
+                <td>Re: Zero</td>
+                <td>8.53</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>67</td>
+                <td>Seven deadly Sins</td>
+                <td>7.15</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>68</td>
+                <td>Soul Eaters</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>69</td>
+                <td>Gate</td>
+                <td>7.37</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>One piece</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>71</td>
+                <td>One Punch Man</td>
+                <td>8.12</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>72</td>
+                <td>Babylon</td>
+                <td></td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>73</td>
+                <td>Black Clover</td>
+                <td>8.73</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>74</td>
+                <td>Spice &amp; Wolf</td>
+                <td>8.44</td>
+                <td> </td>
+                <td>24</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>75</td>
+                <td>Tokyo Ravens</td>
+                <td>7.67</td>
+                <td> </td>
+                <td>24</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>76</td>
+                <td>Irregular at Magic Highschool</td>
+                <td>8.353</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>77</td>
+                <td>I hate being In Pain so I&#39;ll make a full defence buiild</td>
+                <td>6.24</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>78</td>
+                <td>Log Horizon</td>
+                <td>8.55</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>79</td>
+                <td>Angel Beats</td>
+                <td></td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>80</td>
+                <td>Rogue Hero</td>
+                <td>8.3</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>81</td>
+                <td>Chivalry of a Failed Knight</td>
+                <td>6.77</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>82</td>
+                <td>A certain Scienfic Accelerator</td>
+                <td>6.23</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>83</td>
+                <td>Rokko No Yusha</td>
+                <td>7.5</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>84</td>
+                <td>Code Breaker</td>
+                <td>7.89</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>85</td>
+                <td>Ao no Exorcist</td>
+                <td>7.44</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>86</td>
+                <td>Death March</td>
+                <td>6.612</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>87</td>
+                <td>Another</td>
+                <td>8.4</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>88</td>
+                <td>Magi&#39;s Grandchild</td>
+                <td>7.37</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>89</td>
+                <td>Alashic Record of the Bastard Instructor</td>
+                <td></td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>90</td>
+                <td>Noragami</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>91</td>
+                <td>Assassins Pride</td>
+                <td>7.51</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>92</td>
+                <td>Anohana</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>93</td>
+                <td>Erased</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>94</td>
+                <td>Strike the Blood</td>
+                <td>8.8</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>95</td>
+                <td>Isekai Cheat Magicians</td>
+                <td>7.36</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>96</td>
+                <td>Sky Wizard&#39;s Academy</td>
+                <td>6</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>97</td>
+                <td>Corpse Party</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>98</td>
+                <td>Kings Avatar</td>
+                <td>7.25</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td>KonoSuba</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>Magi Series</td>
+                <td>8.49</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Nobelesse</td>
+                <td>8.31</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Mushishi</td>
+                <td>8.15</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>Undefeated Bahamut Chornicle</td>
+                <td>7.41</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>World Break</td>
+                <td>7.4</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>106</td>
+                <td>Hensuki</td>
+                <td></td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>107</td>
+                <td>Devilman Crybaby</td>
+                <td>4.5</td>
+                <td> </td>
+                <td>10</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>108</td>
+                <td>No Blade Dance</td>
+                <td>6.5</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>109</td>
+                <td>We Never learn</td>
+                <td>7.12</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>110</td>
+                <td>Plunderer</td>
+                <td>7.3</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>Darwin&#39;s Game</td>
+                <td>7.25</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>112</td>
+                <td>God Eater</td>
+                <td>8.36</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>113</td>
+                <td>ID: Invated</td>
+                <td>7.15</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>114</td>
+                <td>Guilty Crown</td>
+                <td>8.48</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>115</td>
+                <td>Black Bullet</td>
+                <td>7.85</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>116</td>
+                <td>Bungo Stray Dogs</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>117</td>
+                <td>Sakamoto desu ga?</td>
+                <td>7.12</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>118</td>
+                <td>Grimgar of Fantasy and Ash</td>
+                <td>5.7</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>119</td>
+                <td>Haikuu</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>120</td>
+                <td>Mahou Sensou</td>
+                <td>6.35</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>121</td>
+                <td>Seikokou no Dragonar</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>122</td>
+                <td>Qulidea Code</td>
+                <td></td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>Full Time Magister</td>
+                <td>8.25</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>124</td>
+                <td>Reikenzan</td>
+                <td>8.27</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>125</td>
+                <td>Legend of the Legendary Heroes</td>
+                <td>8.47</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>126</td>
+                <td>Unbreakable Machine Doll</td>
+                <td>6.3</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>127</td>
+                <td>Kingdom</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>128</td>
+                <td>Beelzebub</td>
+                <td>8.37</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>129</td>
+                <td>Haganai</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>130</td>
+                <td>Knights and Magic</td>
+                <td>7.5</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>131</td>
+                <td>Deadman Wonderland</td>
+                <td>7.38</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>132</td>
+                <td>Black Butler</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>133</td>
+                <td>Jormungand</td>
+                <td>7.6</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>134</td>
+                <td>Black Cat</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>135</td>
+                <td>Tower of God</td>
+                <td>7.17</td>
+                <td> </td>
+                <td>13</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>136</td>
+                <td>Twin Star Excorcists</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>137</td>
+                <td>Black Lagoon</td>
+                <td>7.15</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>138</td>
+                <td>Death Parade</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>139</td>
+                <td>Ragnarok</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>140</td>
+                <td>Zero Chornicle</td>
+                <td>6.34</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>141</td>
+                <td>Daily Life of the Immortal King</td>
+                <td>7.2</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>142</td>
+                <td>Devils and Realists</td>
+                <td></td>
+                <td> </td>
+                <td>4</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>143</td>
+                <td>Silver Guardian</td>
+                <td>7.15</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>144</td>
+                <td>Psycho-Pass</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>145</td>
+                <td>Love is war</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>146</td>
+                <td>Science Fell in Love</td>
+                <td>7.09</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>147</td>
+                <td>UQ Holder</td>
+                <td>6.56</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>148</td>
+                <td>Radient</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>149</td>
+                <td>Millionare Detective</td>
+                <td>6</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>150</td>
+                <td>Sorcerous Stabber Orphen</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>151</td>
+                <td>the 8th son</td>
+                <td>6.4</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>152</td>
+                <td>Gelpnir</td>
+                <td>6.25</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>153</td>
+                <td>Chain Chornicle</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>154</td>
+                <td>Re: Dive</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>155</td>
+                <td>Re: Creators</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>156</td>
+                <td>Kekkai sensen</td>
+                <td>7.68</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>157</td>
+                <td>Shelled Regios</td>
+                <td>6.7</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>158</td>
+                <td>No Gun Life</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>159</td>
+                <td>Doreiku</td>
+                <td>7.23</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>160</td>
+                <td>Blade of the Immortal</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>161</td>
+                <td>Armed Girls Machiavellism</td>
+                <td>7.2</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>162</td>
+                <td>Bed and Breakfast for Spirits</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>163</td>
+                <td>Kill la Kill</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>164</td>
+                <td>Maid Dragon</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>165</td>
+                <td>Arslan Senki</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>166</td>
+                <td>Avatar Series</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>167</td>
+                <td>Infinite Dendrogram</td>
+                <td>6.6</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>168</td>
+                <td>Outbreak Company</td>
+                <td>6.2</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>169</td>
+                <td>Dororo</td>
+                <td>8.23</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>170</td>
+                <td>Great Pertender</td>
+                <td>7.3</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>171</td>
+                <td>To Love Ru</td>
+                <td>6.33</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>172</td>
+                <td>Monster</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>173</td>
+                <td>Fireforce</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>174</td>
+                <td>Assassication Classroom</td>
+                <td>8.7</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>175</td>
+                <td>Shuffle</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>176</td>
+                <td>In/ Spectre</td>
+                <td>7.35</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>177</td>
+                <td>Shigurui</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>178</td>
+                <td>Umaru-Chan</td>
+                <td>4.3</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>179</td>
+                <td>The Promised Neverland</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>180</td>
+                <td>Senran Kagura</td>
+                <td>6.22</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>181</td>
+                <td>C3</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>182</td>
+                <td>The Abandoned Scred Beasts</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>183</td>
+                <td>Seraph Of the End</td>
+                <td>7.75</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>184</td>
+                <td>Fullmetal Panic</td>
+                <td>7.16</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>185</td>
+                <td>Ajin</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>186</td>
+                <td>Witch Craft Works</td>
+                <td>7.1</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>187</td>
+                <td>Tsuki ga kirei</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>188</td>
+                <td>When they Cry</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>189</td>
+                <td>Blood C</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>190</td>
+                <td>Why the Hell are you here </td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>191</td>
+                <td>Kabaneri of Iron Fortress</td>
+                <td>7.79</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>192</td>
+                <td>I Couldn&#39;t become a Hero</td>
+                <td>6.17</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>193</td>
+                <td>Samurai Champloo </td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>194</td>
+                <td>Hack Series</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>195</td>
+                <td>Darling in the Franxx</td>
+                <td>7.42</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>196</td>
+                <td>Baccano</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>197</td>
+                <td>Xuan Yuan Sword</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>198</td>
+                <td>Bunny Girl Senpai</td>
+                <td>7.2</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>199</td>
+                <td>Seiken no Blacksmith</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>Darker than Black</td>
+                <td>7.68</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>Nisekoi</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Yona of the Dawn</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>91 Days</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>204</td>
+                <td>Hinamatrui</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>205</td>
+                <td>Rainbow</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>206</td>
+                <td>Free</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>207</td>
+                <td>Prisma Illya</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>208</td>
+                <td>God of Highschool</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>209</td>
+                <td>Tokyo Majin</td>
+                <td></td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td>2</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>210</td>
+                <td>Bungou no Alchemist</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>211</td>
+                <td>Demonic Cultivation</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>212</td>
+                <td>Monogatari Series</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>213</td>
+                <td>Baki</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td>4</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>214</td>
+                <td>Misfit of Demon King Academy</td>
+                <td>7.83</td>
+                <td> </td>
+                <td>13</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>215</td>
+                <td>Mobile Suit Gundam</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>216</td>
+                <td>Certain Magical Index</td>
+                <td>7.4</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>217</td>
+                <td>Deca-Dance</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>218</td>
+                <td>Monster Girl Doctor</td>
+                <td>5</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>219</td>
+                <td>Peter Grill</td>
+                <td>5.5</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>220</td>
+                <td>Rent a GirlFriend</td>
+                <td>6.6</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>221</td>
+                <td>Accdance of a BookWorm</td>
+                <td>6.32</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>222</td>
+                <td>Uzaki Chan</td>
+                <td>4.7</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>223</td>
+                <td>Hidan no Aria</td>
+                <td>6.62</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>224</td>
+                <td>Armor shop for ladies &amp; getleman</td>
+                <td>3.5</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>225</td>
+                <td>Food Wars</td>
+                <td>8.22</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>226</td>
+                <td>Cooking With Valkyries</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>227</td>
+                <td>The Fruit of Grishala</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>228</td>
+                <td>Devil&#39;s Line</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>229</td>
+                <td>Demon Lord Retry</td>
+                <td>6.61</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>230</td>
+                <td>Conception</td>
+                <td>4.25</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>231</td>
+                <td>Rage of Bahamut</td>
+                <td>6.8</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>232</td>
+                <td>Gargantia on the Verdurous Planet</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>233</td>
+                <td>D.Gray man</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>234</td>
+                <td>Planting Manual</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>235</td>
+                <td>I want a Date</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>236</td>
+                <td>The King of Magic Bullet</td>
+                <td>7.76</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>237</td>
+                <td>Alderamin on the Sky</td>
+                <td>7.56</td>
+                <td> </td>
+                <td>12</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>238</td>
+                <td>Puella Magi</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>239</td>
+                <td>Cheating Craft</td>
+                <td>5.1</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>240</td>
+                <td>Break Blade</td>
+                <td>7.8</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>241</td>
+                <td>Zetsuen no Tempst</td>
+                <td>8.35</td>
+                <td> </td>
+                <td>24</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>242</td>
+                <td>Love is hard for Otaku</td>
+                <td>6.23</td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>243</td>
+                <td>Gurren Lagann</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>244</td>
+                <td>Violet Evergarden</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>245</td>
+                <td>Taboo Tattoo</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>246</td>
+                <td>I Want To Eat Your Pancreas</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>247</td>
+                <td>Beyblade Series</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>248</td>
+                <td>youjo senki</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>249</td>
+                <td>Outlaw star</td>
+                <td>7.65</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>250</td>
+                <td>Ghost in the Shell Series</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>251</td>
+                <td>Kenichi: the mightiest disciple</td>
+                <td>7.5</td>
+                <td> </td>
+                <td>50</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>252</td>
+                <td>Hellsign Ultimate</td>
+                <td>7.5</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>253</td>
+                <td>Shiki</td>
+                <td>7</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>254</td>
+                <td>Samurai X trust &amp; Betrayal</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>255</td>
+                <td>Serial Experiments Lain</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>256</td>
+                <td>Parasyte</td>
+                <td>8.4</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>257</td>
+                <td>Problem Children Are Coming from another world</td>
+                <td>6.9</td>
+                <td> </td>
+                <td>10</td>
+                <td>FALSE</td>
+                <td>TRUE</td>
+                <td>8</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>258</td>
+                <td>Maou Yuusha</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>259</td>
+                <td>Kaze no Stigma</td>
+                <td>7.5</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>260</td>
+                <td>Maid Sama</td>
+                <td>8.1</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>261</td>
+                <td>Classroom Crisis</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>262</td>
+                <td>Cowboy Bebop</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>263</td>
+                <td>Crono Crusasde</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>264</td>
+                <td>Jujutsu Kaisen</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>265</td>
+                <td>Standing on 1M lives</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>266</td>
+                <td>King&#39;s Raid</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>267</td>
+                <td>Shinkekai Yori</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>268</td>
+                <td>Shimoneta</td>
+                <td>7.2</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>269</td>
+                <td>Our Last Crusade</td>
+                <td></td>
+                <td> </td>
+                <td>12</td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>270</td>
+                <td>The Money &amp; Soul of Prossibility</td>
+                <td>7.12</td>
+                <td> </td>
+                <td>11</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>271</td>
+                <td>Kiznaiver</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>272</td>
+                <td>Tales of Zesteria the X</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td>opening../</td>
+            </tr>
+            <tr>
+                <td>273</td>
+                <td>Aldnoah Zero</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>274</td>
+                <td>Blood Lad</td>
+                <td>7.1</td>
+                <td> </td>
+                <td>10</td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td>don’t be fooled by crappy cover</td>
+            </tr>
+            <tr>
+                <td>275</td>
+                <td>Akudama Drive</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>276</td>
+                <td>Dorohedoro</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>277</td>
+                <td>Tonikawa Kawai</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>278</td>
+                <td>Talentless Nana</td>
+                <td>7.08</td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>279</td>
+                <td>Heaven Official&#39;s Blessing</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>280</td>
+                <td>Grand Blue</td>
+                <td>8.02</td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>281</td>
+                <td>Welcome To Demon School</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>TRUE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>282</td>
+                <td>Berserk</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>FALSE</td>
+                <td>FALSE</td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <!-- <td  >283</td>
     <td> </td>
     <td  ></td>
     <td> </td>
@@ -3193,8 +3234,10 @@
     <td  ></td>
     <td> </td>
     </tr> -->
-</tbody></table>
+        </tbody>
+    </table>
 
 
 </hody>
+
 </html>

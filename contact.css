@@ -1,0 +1,20 @@
+/* There is somw sort of priority stuffs going on but I don't actually know much about it, so...
+
+basically this follwoing sniffet always overwrote the header style everything is used it as internal css in the footer
+
+li styles were rewritted everytime the brower read the footer before diplaying and ended up using it as the default..like last come first served
+
+so, to decrease it's priority for rendering i had to use it as a external css and then things went on quite well*/
+
+footer li a {
+display: block;
+color: rgba(248, 246, 246, 0.726);
+padding: 8px 20px;
+text-decoration: none;
+text-align: left;
+        }
+
+footer li a:hover {
+background-color: rgb(41, 138, 202);
+color: white;
+}

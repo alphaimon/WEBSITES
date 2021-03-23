@@ -1,11 +1,12 @@
 h1 {
-  color: rgb(255, 17, 0);
+  color: rgb(255, 60, 0);
 }
 p {
-  color: rgb(190, 199, 211);
+  color: rgb(28, 167, 23);
 }
+/* color of odd rows */
 #AnimeTable {
-    color: brown;
+    color: rgb(203, 212, 221);
 }
 
 body {
@@ -18,7 +19,7 @@ table  {
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
-    color: red;
+    color: rgb(111, 204, 99);
   }
   
   th, td {
@@ -27,6 +28,6 @@ table  {
   }
   
   tr:nth-child(even) {
-    background-color: brown;
+    background-color: rgb(42, 85, 165);
     color: wheat;
   }
