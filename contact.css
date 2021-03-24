@@ -18,3 +18,8 @@ footer li a:hover {
 background-color: rgb(41, 138, 202);
 color: white;
 }
+
+/* to avoid horizontal alignment */
+footer li {
+        float: none;
+}
