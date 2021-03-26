@@ -21,37 +21,12 @@ header li {
   background-color: rgb(22, 72, 163);
   color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1 {
-  color: rgb(255, 60, 0);
-}
-p {
-  color: rgb(28, 167, 23);
-}
+/* 77777777777777777777777777777777777 */
 /* color of odd rows */
 #AnimeTable {
     color: rgb(203, 212, 221);
 }
-
 body {
-
     color: white;
     background-color: black;
 }
@@ -59,8 +34,7 @@ body {
 table  {
     border-spacing: 0;
     width: 100%;
-    border: 1px solid #ddd;
-    color: rgb(111, 204, 99);
+    border: 3px solid #ddd;
   }
   
   th, td {
@@ -70,5 +44,8 @@ table  {
   
   tr:nth-child(even) {
     background-color: rgb(42, 85, 165);
-    color: wheat;
+    color: rgb(255, 250, 250);
   }
+#TableContainer {
+  margin-top: 50;
+}
