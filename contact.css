@@ -5,21 +5,58 @@ basically this follwoing sniffet always overwrote the header style everything is
 li styles were rewritted everytime the brower read the footer before diplaying and ended up using it as the default..like last come first served
 
 so, to decrease it's priority for rendering i had to use it as a external css and then things went on quite well*/
+/* <!-- Copy paste material --> */
+ 
+/* ************NaviGation Bar**********************  */
+ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 2 2 2 2;
 
+        overflow: hidden;
+        background-color: #e4edfc;
+}
+    /* This Float is the only thing that's responsible for vertical alighnment of the contents */
+li {
+        float: left;
+}
+li a {
+        display: flex;
+        width: max-content;
+        color: #000;
+        text-align: center;
+        padding: 8px 16px;
+        text-decoration: none;
+}
+li a:hover {
+        background-color: rgb(22, 72, 163);
+        color: white;
+}
+/*    The body section in this page is almost non-existent */
+footer ul {
+list-style-type: none;
+margin: 10; 
+padding: 5 5 5 5;
+width: 300px;
+height: 300px;
+border-radius: 8px;
+border: 3px #eaf0f5 solid;
+background-color: #00438f;
+}
 footer li a {
 display: block;
-color: rgba(248, 246, 246, 0.726);
+color: rgba(253, 253, 253, 0.726);
 padding: 8px 20px;
 text-decoration: none;
 text-align: left;
         }
-
 footer li a:hover {
-background-color: rgb(41, 138, 202);
+background-color: rgb(53, 155, 238);
 color: white;
 }
-
-/* to avoid horizontal alignment */
+/* to avoid horizontal alignment
+and it changes the normal list items */
 footer li {
         float: none;
+        color: rgb(162, 187, 233);
 }

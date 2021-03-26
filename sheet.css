@@ -1,11 +1,4 @@
-body {
-    background-color: black;
-    color:blanchedalmond;
-}
-h1 {
-    color: rgb(255, 255, 255);
-}
-
+/* they belong to the header */
 header ul {
   list-style-type: none;
   margin: 0;
@@ -17,7 +10,7 @@ header ul {
 header li {
     float: left;
 }
-header li a {
+ header li a {
   display: flex;
   width: max-content;
   color: #000;
@@ -25,14 +18,29 @@ header li a {
   padding: 8px 16px;
   text-decoration: none;
 }
-header li a:hover {
+ header li a:hover {
   background-color: rgb(22, 72, 163);
   color: white;
 }
 
-
-/* body list */
-#animes {
-    background-color: rgb(0, 0, 0);
-}
 /*The fucking Body and Header was fucking interfereing with each other*/
+/* so I ended up targetiong the animesites div solely */
+#animesites ul {
+  list-style-type: none;
+  margin: 10 0 50 20;
+  border: 2px rgb(182, 182, 182) solid;
+  padding: 5;
+  width: 200px;
+  background-color: #8f1601;
+}
+#animesites li a {
+  display: block;
+  color: rgba(248, 246, 246, 0.726);
+  padding: 8px 20px;
+  text-decoration: none;
+  text-align: left;
+}
+#animesites li a:hover {
+  background-color: rgb(163, 22, 22);
+  color: white;
+}
